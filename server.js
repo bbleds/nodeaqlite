@@ -10,22 +10,21 @@ const app = express();
 
 console.log('# of invoices per country');
 
-db.all(`
-  SELECT   COUNT(*) AS count,
-           BillingCountry AS country
-  FROM     Invoice
-  GROUP BY BillingCountry
-  ORDER BY count DESC`,
-    (err, res) => {
-      if (err) throw err;
-
-      console.log(res);
-    }
-);
-
 app.get("/", (req, res) =>
  {
-   res.send("bruh");
+   db.all(`
+     SELECT   COUNT(*) AS count,
+              BillingCountry AS country
+     FROM     Invoice
+     GROUP BY BillingCountry
+     ORDER BY count DESC`,
+       (err, data) => {
+         if (err) throw err;
+
+         console.log(data);
+         res.json(data);
+       }
+   );
  });
 
 
