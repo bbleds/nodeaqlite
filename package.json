@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/bbleds/nodeaqlite#readme",
   "dependencies": {
+    "express": "^4.13.4",
     "nodemon": "^1.9.0",
     "sqlite3": "^3.1.1"
   }
