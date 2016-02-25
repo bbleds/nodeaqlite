@@ -1,0 +1,25 @@
+{
+  "name": "nodeaqlite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --harmony_destructuring server.js",
+    "dev": "nodemon --harmony_destructuring server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbleds/nodeaqlite.git"
+  },
+  "author": "Benjamin Bledsoe <bledsoedesigns@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bbleds/nodeaqlite/issues"
+  },
+  "homepage": "https://github.com/bbleds/nodeaqlite#readme",
+  "dependencies": {
+    "nodemon": "^1.9.0",
+    "sqlite3": "^3.1.1"
+  }
+}
